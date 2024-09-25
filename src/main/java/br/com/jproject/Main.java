@@ -1,8 +1,10 @@
 package br.com.jproject;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 import static br.com.jproject.BubbleSortExample.bubbleSort;
+import static br.com.jproject.FactorialCalculator.factorial;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,5 +21,13 @@ public class Main {
         System.out.println("Vetor original: " + Arrays.toString(v));
         bubbleSort(v);
         System.out.println("Vetor ordenado: " + Arrays.toString(v));
+
+
+        //Execucao do metodo de calculo de fatorial
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite um número para calcular o fatorial: ");
+        int number = scanner.nextInt();
+        long factorialResult = factorial(number);
+        System.out.println("O fatorial de " + number + " é: " + factorialResult);
     }
 }
